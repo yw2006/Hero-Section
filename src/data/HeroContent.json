@@ -1,0 +1,29 @@
+{
+  "headlines": [
+    "Transform Your Digital Presence Today",
+    "Elevate Your Brand to New Heights",
+    "Innovate, Create, Dominate Your Market",
+    "Unleash Your Business Potential",
+    "Reimagine What's Possible Online"
+  ],
+  "subheadlines": [
+    "All-in-one platform to create stunning websites without code. Start your free trial now.",
+    "Our AI-powered tools help you build beautiful websites in minutes, not months.",
+    "Join thousands of businesses that trust us with their online presence.",
+    "Powerful tools, beautiful templates, exceptional support - everything you need to succeed.",
+    "Build your dream website with intuitive drag-and-drop tools and AI assistance."
+  ],
+  "images": [
+    "../../public/images/hero1.jpg",
+    "../../public/images/hero2.jpg",
+    "../../public/images/hero3.jpg",
+    "../../public/images/hero4.jpg",
+    "../../public/images/hero5.jpg"
+  ],
+  "defaultContent": {
+    "headline": "Revolutionize Your Web Experience",
+    "subheadline": "Build beautiful, responsive websites in minutes with our intuitive platform and AI-powered tools.",
+    "buttonText": "Get Started Free",
+    "image": "../../public/images/hero1.jpg"
+  }
+}
