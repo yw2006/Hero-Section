@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import PropTypes from "prop-types"; // ✅ Import PropTypes
 
 const EditableText = ({
   content,
@@ -8,19 +9,23 @@ const EditableText = ({
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(content);
+
   const handleInputChange = (e) => {
     setValue(e.target.value);
   };
+
   const handleKeyDown = (e) => {
-    if (e.key == "Enter") {
+    if (e.key === "Enter") {
       setIsEditing(false);
       onUpdate(value);
     }
   };
+
   const handleBlur = () => {
     setIsEditing(false);
     onUpdate(value);
   };
+
   if (isEditing) {
     return (
       <input
@@ -34,14 +39,25 @@ const EditableText = ({
       />
     );
   }
+
   return (
     <div
-      onClick={() => {setIsEditing(true);setValue(content)}}
+      onClick={() => {
+        setIsEditing(true);
+        setValue(content);
+      }}
       className={`cursor-pointer hover:opacity-90 transition duration-200 ${className}`}
     >
       {content}
     </div>
   );
 };
-    
+
+EditableText.propTypes = {
+  content: PropTypes.string.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  className: PropTypes.string,
+  inputClassName: PropTypes.string,
+};
+
 export default EditableText;
