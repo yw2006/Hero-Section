@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PropTypes from "prop-types"; // ✅ Import PropTypes
+import PropTypes from "prop-types";
 
 const EditableText = ({
   content,
@@ -18,6 +18,10 @@ const EditableText = ({
     if (e.key === "Enter") {
       setIsEditing(false);
       onUpdate(value);
+    } else if (!isEditing && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      setIsEditing(true);
+      setValue(content);
     }
   };
 
@@ -42,10 +46,13 @@ const EditableText = ({
 
   return (
     <div
+      role="button" 
+      tabIndex={0} 
       onClick={() => {
         setIsEditing(true);
         setValue(content);
       }}
+      onKeyDown={handleKeyDown} 
       className={`cursor-pointer hover:opacity-90 transition duration-200 ${className}`}
     >
       {content}

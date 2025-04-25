@@ -21,7 +21,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 min-h-screen flex items-center">
+    <section className="bg-gradient-to-br  from-blue-50 via-indigo-50 to-blue-50 min-h-screen flex items-center">
       <div className="container mx-auto px-6 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 space-y-8">
